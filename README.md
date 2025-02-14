@@ -1,0 +1,1 @@
+This is a simple rock,paper,scissors game project aiming to practice and improve JavaScript concepts and knowledge
