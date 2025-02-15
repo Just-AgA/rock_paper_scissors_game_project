@@ -6,3 +6,9 @@ function getComputerChoice() {
     return choices[randomChoice];
 }
 
+// Create the function that gets the human choice
+function getHumanChoice() {
+    let choice = prompt("Please enter your choice:");
+    return choice;
+}
+
