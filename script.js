@@ -16,7 +16,14 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+// Create the function to play one round
 function playRound(humanChoice, computerChoice) {
+    const choices = ["rock", "paper", "scissors"];
+    if (!choices.includes(humanChoice) || humanChoice === ""){
+        const answer = console.log(`Please enter a valid choice!`);
+        return answer;
+    };
+
     if(humanChoice === computerChoice){
         console.log(`It's a tie!`)
     }else if ((humanChoice === "rock" && computerChoice === "paper") || (humanChoice === "paper" && computerChoice === "scissors") || (humanChoice === "scissors" && computerChoice === "rock")) {
