@@ -9,6 +9,26 @@ function getComputerChoice() {
 // Create the function that gets the human choice
 function getHumanChoice() {
     let choice = prompt("Please enter your choice:");
-    return choice;
+    return choice.toLowerCase();
 }
 
+// Initilize the score variables and set their defualt value to 0
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    if(humanChoice === computerChoice){
+        console.log(`It's a tie!`)
+    }else if ((humanChoice === "rock" && computerChoice === "paper") || (humanChoice === "paper" && computerChoice === "scissors") || (humanChoice === "scissors" && computerChoice === "rock")) {
+        console.log(`You lose! ${computerChoice.toUpperCase()} beats ${humanChoice.toUpperCase()}`);
+        computerScore++;
+    }else {
+        console.log(`You win! ${humanChoice.toUpperCase()} beats ${computerChoice.toUpperCase()}`);
+        humanScore++;
+    };
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
