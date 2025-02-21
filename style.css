@@ -1,0 +1,46 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(57, 61, 66);
+    color: rgb(207, 196, 196);
+}
+
+.wrapper {
+    border: 5px solid rgb(185, 170, 170);
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
+button {
+    padding: 20px;
+    background-color: aqua;
+    border-radius: 25px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.display-result {
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+h1, h3 {
+    text-align: center;
+}
