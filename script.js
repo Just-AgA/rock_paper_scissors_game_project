@@ -6,6 +6,7 @@ const paperPlayerSelection = getHumanChoice("paper");
 const rockPlayerSelection = getHumanChoice("rock");
 const scissorsPlayerSelection = getHumanChoice("scissors");
 const buttons = document.querySelectorAll("button");
+const container = document.querySelector(".container");
 
 
 // Create the function that chooses randomly for the computer
@@ -56,6 +57,18 @@ function playRound(humanChoice, computerChoice) {
             Computer's score: ${computerScore} points`
 
             buttons.forEach(button => button.disabled = true);
+
+        playAgainButton = document.createElement("button");
+        playAgainButton.innerText = "Play Again?";
+        container.appendChild(playAgainButton);
+
+        playAgainButton.addEventListener("click", () => {
+            humanScore = 0;
+            computerScore = 0;
+            displayResult.innerText = "";
+            playAgainButton.style.display = "none"
+            buttons.forEach(button => button.disabled = false);
+        })
     }
 
     
